@@ -7,9 +7,9 @@ const CardContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 5px solid #504e4e;
-  border-top-left-radius: 8rem;
-  border-top-right-radius: 8rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 
   @media (max-width: 800px) {
     width: 20rem;
@@ -19,7 +19,9 @@ const CardContainer = styled.div`
 
 const CardTitle = styled.div`
   font-size: 1.75rem;
-  margin: 10px 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  margin: 10px 20px;
   color: #333a51;
 `;
 
@@ -35,7 +37,7 @@ const CardEmoji = styled.span`
 
 const CardLink = styled.a`
   text-decoration: none;
-  border: 3px solid #504e4e;
+  border: 2px solid #504e4e;
   padding: 10px;
   margin-bottom: 10px;
   transition: all 500ms ease;
@@ -54,33 +56,13 @@ const CardTop = styled.div`
 `;
 
 const CardBottom = styled.div`
-  text-align: center;
   background: #f7f7f7;
   width: 100%;
-  border-bottom: 5px solid #504e4e;
-  border-left: 5px solid #504e4e;
-  border-right: 5px solid #504e4e;
+  height: 100%;
   position: relative;
-
-  &::before {
-    content: "";
-    width: 16px;
-    height: 5px;
-    background: #504e4e;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-
-  &::after {
-    content: "";
-    width: 16px;
-    height: 5px;
-    background: #504e4e;
-    position: absolute;
-    top: 0;
-    right: 0;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 `;
 
 const Flex = styled.div`

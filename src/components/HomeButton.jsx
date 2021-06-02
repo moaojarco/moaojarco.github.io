@@ -7,6 +7,7 @@ const SimpleButton = styled(Link)`
   margin: 20px;
   padding: 5px;
   text-align: center;
+  font-size: 1.5rem;
 
   border: 1px dotted #333a51;
 `;
