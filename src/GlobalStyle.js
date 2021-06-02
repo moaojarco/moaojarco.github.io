@@ -11,6 +11,11 @@ body {
 
     background: linear-gradient(270deg,#fff,#ece9e6);
 }
+
+a {
+    text-decoration: none;
+    color: #f13d3d;
+}
 `;
 
 export default GlobalStyle;

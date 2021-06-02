@@ -2,9 +2,13 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 const NavContainer = styled.div`
+  padding: 2rem;
+
   @media (max-width: 800px) {
     display: flex;
     flex-direction: column;
+
+    padding: 2rem;
   }
 `;
 
@@ -31,7 +35,7 @@ const NavTitle = styled.a`
   }
 
   @media (max-width: 800px) {
-    font-size: 18px;
+    font-size: 0.75rem;
     border-bottom: 2px dotted #333a51;
 
     &:hover {

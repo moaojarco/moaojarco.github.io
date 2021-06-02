@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Nav from "../components/Nav";
+import HomeButton from "../components/HomeButton";
 
 const AboutContainer = styled.div`
   width: 100%;
@@ -56,6 +57,10 @@ const ProfileTitle = styled.h1`
   font-size: 1.8rem;
   color: #333a51;
   font-family: "Montserrat", sans-serif;
+
+  @media (max-width: 800px) {
+    font-size: 1.1rem;
+  }
 `;
 
 const ProfileText = styled.p`
@@ -67,6 +72,7 @@ const Sou = () => {
   return (
     <div>
       <AboutContainer>
+        <HomeButton />
         <AboutWrapper>
           <AboutTitle>About me 🧒</AboutTitle>
           <ProfileContainer>
@@ -81,6 +87,10 @@ const Sou = () => {
                 technology to solve my life's problems and ambitions, and not to
                 mention, I really like a good cup of cafe ☕ while listening to
                 some playlist 🎵.
+              </ProfileText>
+              <ProfileText>
+                My favorite technologies right now are: React.js, MySQL,
+                Node.js, and Styled Components 💅.
               </ProfileText>
             </div>
           </ProfileContainer>
