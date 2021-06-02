@@ -6,6 +6,10 @@ const AboutContainer = styled.div`
   margin-top: 5rem;
   height: 89.8vh;
   background: linear-gradient(270deg, #fff, #ece9e6);
+
+  @media (max-width: 800px) {
+    margin-top: 1rem;
+  }
 `;
 
 const AboutWrapper = styled.div`

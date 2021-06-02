@@ -2,7 +2,10 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 const NavContainer = styled.div`
-  margin: 4rem;
+  @media (max-width: 800px) {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 const NavWrapper = styled.div`
@@ -26,10 +29,16 @@ const NavTitle = styled.a`
   &:hover {
     border-bottom: 4px dotted #f13d3d;
   }
+
+  @media (max-width: 800px) {
+    font-size: 18px;
+    border-bottom: 2px dotted #333a51;
+  }
 `;
 
 const LinkStyled = styled(Link)`
   text-decoration: none;
+  margin-left: 10px;
 `;
 
 const Nav = () => {
