@@ -3,7 +3,6 @@ import Nav from "../components/Nav";
 
 const AboutContainer = styled.div`
   width: 100%;
-  margin-top: 5rem;
   height: 89.8vh;
   background: linear-gradient(270deg, #fff, #ece9e6);
 

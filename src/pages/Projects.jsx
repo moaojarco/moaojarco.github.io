@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Nav from "../components/Nav";
+import Card from "../components/Card";
 
 const ProjectsContainer = styled.div`
   display: grid;
@@ -15,13 +16,8 @@ const SectionTitle = styled.h1`
 `;
 
 const ProjectsWrapper = styled.div`
-  max-width: 61.25;
+  max-width: 61.25rem;
   margin: 0.625rem auto;
-`;
-
-const ProjectCard = styled.div`
-  background: #f13d3d;
-  height: 15rem;
 `;
 
 const Projects = () => {
@@ -30,9 +26,24 @@ const Projects = () => {
       <ProjectsWrapper>
         <SectionTitle>My Projects 📂</SectionTitle>
         <ProjectsContainer>
-          <ProjectCard>kk</ProjectCard>
-          <ProjectCard>kk</ProjectCard>
-          <ProjectCard>kk</ProjectCard>
+          <Card
+            projectEmoji="🎨"
+            projectName="Palette"
+            projectLink="#"
+            background="#919191"
+          />
+          <Card
+            projectEmoji="🔫"
+            projectName="CSGO Crosshairs"
+            projectLink="#"
+            background="#919191"
+          />
+          <Card
+            projectEmoji="🧒"
+            projectName="Portfolio"
+            projectLink="#"
+            background="#919191"
+          />
         </ProjectsContainer>
       </ProjectsWrapper>
       <Nav />
