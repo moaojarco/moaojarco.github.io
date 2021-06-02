@@ -76,7 +76,7 @@ const Sou = () => {
         <AboutWrapper>
           <AboutTitle>About me 🧒</AboutTitle>
           <ProfileContainer>
-            <ProfilePhoto src="./assets/jon.jpg" />
+            <ProfilePhoto src="../assets/jon.jpg" />
             <div>
               <ProfileTitle>
                 I'm a Frontend developer, terrible designer and Music Lover
