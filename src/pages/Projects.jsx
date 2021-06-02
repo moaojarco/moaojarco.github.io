@@ -3,20 +3,20 @@ import Nav from "../components/Nav";
 
 const ProjectsContainer = styled.div`
   display: grid;
-  gap: 20px;
+  gap: 1.25rem;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr 100px;
+  grid-template-rows: 1fr 6.25rem;
 `;
 
 const SectionTitle = styled.h1`
-  font-size: 28px;
+  font-size: 1.75rem;
   color: #333a51;
-  padding: 18px;
+  padding: 1.125rem;
 `;
 
 const ProjectsWrapper = styled.div`
-  max-width: 980px;
-  margin: 10px auto;
+  max-width: 61.25;
+  margin: 0.625rem auto;
 `;
 
 const ProjectCard = styled.div`

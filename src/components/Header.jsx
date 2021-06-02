@@ -19,7 +19,7 @@ const CentralContainer = styled.div`
 `;
 
 const CentralTitle = styled.h1`
-  font-size: 6.8rem;
+  font-size: 5rem;
   color: #333a51;
 
   font-family: "Montserrat", sans-serif;
@@ -34,11 +34,11 @@ const CentralTitle = styled.h1`
 `;
 
 const CentralSubTitle = styled.h2`
-  font-size: 20px;
+  font-size: 1.25rem;
   color: #424b6c;
 
   font-style: italic;
-  line-height: 10px;
+  line-height: 0.625rem;
 `;
 
 const Highlight = styled.span`

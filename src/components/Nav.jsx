@@ -9,7 +9,7 @@ const NavContainer = styled.div`
 `;
 
 const NavWrapper = styled.div`
-  max-width: 960px;
+  max-width: 60rem;
   margin: 0 auto;
 `;
 
@@ -19,7 +19,7 @@ const NavContent = styled.div`
 `;
 
 const NavTitle = styled.a`
-  font-size: 28px;
+  font-size: 1.75rem;
   color: #333a51;
   border-bottom: 4px dotted #333a51;
 
@@ -33,12 +33,20 @@ const NavTitle = styled.a`
   @media (max-width: 800px) {
     font-size: 18px;
     border-bottom: 2px dotted #333a51;
+
+    &:hover {
+      border-bottom: 2px dotted #f13d3d;
+    }
   }
 `;
 
 const LinkStyled = styled(Link)`
   text-decoration: none;
-  margin-left: 10px;
+  margin-left: 0.625rem;
+
+  @media (max-width: 800px) {
+    margin-left: 1.5rem;
+  }
 `;
 
 const Nav = () => {
