@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Nav from "../components/Nav";
 import React from "react";
+import HomeButton from "../components/HomeButton";
 
 const ContactContainer = styled.div`
   width: 100%;
@@ -58,6 +59,11 @@ const FormButton = styled.button`
   }
 `;
 
+const Flex = styled.div`
+  display: flex;
+  justify-content: space-around;
+`;
+
 const Contact = () => {
   const [name, setName] = React.useState("");
   const [email, setEmail] = React.useState("");
@@ -71,7 +77,10 @@ const Contact = () => {
   return (
     <ContactContainer>
       <ContactWrapper>
-        <ContactTitle>Contact</ContactTitle>
+        <Flex>
+          <ContactTitle>Contact</ContactTitle>
+          <HomeButton />
+        </Flex>
         <Form
           name="contact"
           onSubmit={(e) => {
