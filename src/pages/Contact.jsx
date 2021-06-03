@@ -14,9 +14,8 @@ const ContactWrapper = styled.div`
 `;
 
 const ContactTitle = styled.h1`
-  font-size: 3rem;
+  font-size: 1.75rem;
   color: #333a51;
-  font-family: "Montserrat", sans-serif;
 `;
 
 const Form = styled.form`
@@ -78,7 +77,7 @@ const Contact = () => {
     <ContactContainer>
       <ContactWrapper>
         <Flex>
-          <ContactTitle>Contact</ContactTitle>
+          <ContactTitle>Contact 📩</ContactTitle>
           <HomeButton />
         </Flex>
         <Form

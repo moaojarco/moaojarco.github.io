@@ -37,7 +37,7 @@ const CardEmoji = styled.span`
 
 const CardLink = styled.a`
   text-decoration: none;
-  border: 2px solid #504e4e;
+  border: 1px dotted #504e4e;
   padding: 10px;
   margin-bottom: 10px;
   transition: all 500ms ease;
