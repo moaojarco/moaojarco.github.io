@@ -9,7 +9,7 @@ const SimpleButton = styled(Link)`
   text-align: center;
   font-size: 1.5rem;
 
-  border: 1px dotted #333a51;
+  border: 2px dotted #333a51;
 `;
 
 const HomeButton = () => {

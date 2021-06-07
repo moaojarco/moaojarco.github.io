@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import Nav from "../components/Nav";
-import React from "react";
+import { useState } from "react";
 import HomeButton from "../components/HomeButton";
+import { db } from "../firebase";
 
 const ContactContainer = styled.div`
   width: 100%;
@@ -64,14 +65,38 @@ const Flex = styled.div`
 `;
 
 const Contact = () => {
-  const [name, setName] = React.useState("");
-  const [email, setEmail] = React.useState("");
-  const [title, setTitle] = React.useState("");
-  const [message, setMessage] = React.useState("");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [title, setTitle] = useState("");
+  const [message, setMessage] = useState("");
 
-  function handleSubmit() {
-    console.table(name, email, title, message);
-  }
+  const [loader, setLoader] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoader(true);
+
+    db.collection("contacts")
+      .add({
+        name: name,
+        email: email,
+        title: title,
+        message: message,
+      })
+      .then(() => {
+        setLoader(false);
+        alert("Your message has been submitted👍");
+      })
+      .catch((error) => {
+        alert(error.message);
+        setLoader(false);
+      });
+
+    setName("");
+    setEmail("");
+    setTitle("");
+    setMessage("");
+  };
 
   return (
     <ContactContainer>
@@ -80,37 +105,19 @@ const Contact = () => {
           <ContactTitle>Contact 📩</ContactTitle>
           <HomeButton />
         </Flex>
-        <Form
-          name="contact"
-          onSubmit={(e) => {
-            e.preventDefault();
-          }}
-        >
+        <Form name="contact" onSubmit={handleSubmit}>
           <FormLabel>Nome</FormLabel>
-          <FormInput
-            type="text"
-            name="name"
-            onChange={(e) => setName(e.target.value)}
-          />
+          <FormInput value={name} onChange={(e) => setName(e.target.value)} />
           <FormLabel>E-mail</FormLabel>
-          <FormInput
-            type="text"
-            name="email"
-            onChange={(e) => setEmail(e.target.value)}
-          />
+          <FormInput value={email} onChange={(e) => setEmail(e.target.value)} />
           <FormLabel>Title Message</FormLabel>
-          <FormInput
-            type="text"
-            name="title"
-            onChange={(e) => setTitle(e.target.value)}
-          />
+          <FormInput value={title} onChange={(e) => setTitle(e.target.value)} />
           <FormLabel>Message</FormLabel>
           <FormInputMessage
-            type="text"
-            name="message"
+            value={message}
             onChange={(e) => setMessage(e.target.value)}
           />
-          <FormButton onClick={handleSubmit}>Submit</FormButton>
+          <FormButton type="submit">Submit</FormButton>
         </Form>
         <Nav />
       </ContactWrapper>

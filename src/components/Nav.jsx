@@ -42,6 +42,10 @@ const NavTitle = styled.a`
       border-bottom: 2px dotted #f13d3d;
     }
   }
+
+  @media (max-width: 360px) {
+    font-size: 0.65rem;
+  }
 `;
 
 const LinkStyled = styled(Link)`

@@ -3,6 +3,10 @@ import Nav from "../components/Nav";
 import Card from "../components/Card";
 import HomeButton from "../components/HomeButton";
 
+const MyProjectContainer = styled.div`
+  width: 100%;
+`;
+
 const ProjectsContainer = styled.div`
   display: grid;
   gap: 5rem;
@@ -17,7 +21,6 @@ const ProjectsContainer = styled.div`
 const SectionTitle = styled.h1`
   font-size: 1.75rem;
   color: #333a51;
-  padding: 1.125rem;
 `;
 
 const ProjectsWrapper = styled.div`
@@ -25,25 +28,25 @@ const ProjectsWrapper = styled.div`
   margin: 0 auto;
 `;
 
-const HeaderSection = styled.div`
+const Flex = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 `;
 
 const Projects = () => {
   return (
-    <div>
+    <MyProjectContainer>
+      <Flex>
+        <SectionTitle>My Projects 📂</SectionTitle>
+        <HomeButton />
+      </Flex>
       <ProjectsWrapper>
-        <HeaderSection>
-          <SectionTitle>My Projects 📂</SectionTitle>
-          <HomeButton />
-        </HeaderSection>
         <ProjectsContainer>
           <Card
             projectEmoji="🎨"
             projectName="Palette"
-            projectGithub="https://github.com/moaojarco/colors-palette"
-            projectUrl="http://moaojarco.github.io/colors-palette"
+            projectGithub="https://github.com/moaojarco/palettes/"
+            projectUrl="https://moaojarco.github.io/palettes/"
             background="#ffe5b4"
             projectDesc="Simple app to generate random palettes for you"
           />
@@ -63,10 +66,18 @@ const Projects = () => {
             background="#b4d4ff"
             projectDesc="You are looking for him! project to present me and my projects"
           />
+          <Card
+            projectEmoji="📓"
+            projectName="TodoList"
+            projectGithub="https://github.com/moaojarco/todolist-fb"
+            projectUrl="https://moaojarco.github.io/todolist-fb/"
+            background="#ffb4b4"
+            projectDesc="ToDo with Firebase database"
+          />
         </ProjectsContainer>
         <Nav />
       </ProjectsWrapper>
-    </div>
+    </MyProjectContainer>
   );
 };
 

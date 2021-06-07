@@ -68,13 +68,20 @@ const ProfileText = styled.p`
   line-height: 1.375rem;
 `;
 
+const Flex = styled.div`
+  display: flex;
+  justify-content: space-around;
+`;
+
 const Sou = () => {
   return (
     <div>
       <AboutContainer>
-        <HomeButton />
-        <AboutWrapper>
+        <Flex>
           <AboutTitle>About me 🧒</AboutTitle>
+          <HomeButton />
+        </Flex>
+        <AboutWrapper>
           <ProfileContainer>
             <ProfilePhoto src="../assets/jon.jpg" />
             <div>
