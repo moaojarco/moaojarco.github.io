@@ -74,6 +74,14 @@ const Projects = () => {
             background="#ffb4b4"
             projectDesc="ToDo with Firebase database"
           />
+          <Card
+            projectEmoji="🎯"
+            projectName="Valorant App"
+            projectGithub="https://github.com/moaojarco/valorant-app"
+            projectUrl="https://moaojarco.github.io/valorant-app/"
+            background="#fa4454"
+            projectDesc="App to display data about game Valorant"
+          />
         </ProjectsContainer>
         <Nav />
       </ProjectsWrapper>
