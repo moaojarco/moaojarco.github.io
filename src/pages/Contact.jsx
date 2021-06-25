@@ -106,7 +106,7 @@ const Contact = () => {
           <HomeButton />
         </Flex>
         <Form name="contact" onSubmit={handleSubmit}>
-          <FormLabel>Nome</FormLabel>
+          <FormLabel>Name</FormLabel>
           <FormInput value={name} onChange={(e) => setName(e.target.value)} />
           <FormLabel>E-mail</FormLabel>
           <FormInput value={email} onChange={(e) => setEmail(e.target.value)} />
