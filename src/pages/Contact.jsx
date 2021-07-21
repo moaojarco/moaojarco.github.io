@@ -2,7 +2,6 @@ import styled from "styled-components";
 import Nav from "../components/Nav";
 import { useState } from "react";
 import HomeButton from "../components/HomeButton";
-import { db } from "../firebase";
 
 const ContactContainer = styled.div`
   width: 100%;
@@ -72,31 +71,7 @@ const Contact = () => {
 
   const [loader, setLoader] = useState(false);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setLoader(true);
-
-    db.collection("contacts")
-      .add({
-        name: name,
-        email: email,
-        title: title,
-        message: message,
-      })
-      .then(() => {
-        setLoader(false);
-        alert("Your message has been submitted👍");
-      })
-      .catch((error) => {
-        alert(error.message);
-        setLoader(false);
-      });
-
-    setName("");
-    setEmail("");
-    setTitle("");
-    setMessage("");
-  };
+  
 
   return (
     <ContactContainer>
@@ -105,7 +80,7 @@ const Contact = () => {
           <ContactTitle>Contact 📩</ContactTitle>
           <HomeButton />
         </Flex>
-        <Form name="contact" onSubmit={handleSubmit}>
+        <Form name="contact">
           <FormLabel>Name</FormLabel>
           <FormInput value={name} onChange={(e) => setName(e.target.value)} />
           <FormLabel>E-mail</FormLabel>

@@ -82,6 +82,14 @@ const Projects = () => {
             background="#fa4454"
             projectDesc="App to display data about game Valorant"
           />
+          <Card
+            projectEmoji="🗺"
+            projectName="Countries App"
+            projectGithub="https://github.com/moaojarco/countries-app"
+            projectUrl="https://moaojarco.github.io/countries-app/"
+            background="#d3b944"
+            projectDesc="App to display data about countries"
+          />
         </ProjectsContainer>
         <Nav />
       </ProjectsWrapper>
